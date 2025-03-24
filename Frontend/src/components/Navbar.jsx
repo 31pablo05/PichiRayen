@@ -23,7 +23,7 @@ function Navbar() {
     };
   }, [handleScroll]);
 
-  // Elementos del menú actualizados
+  // Elementos del menú
   const menuItems = [
     { id: 'inicio', icon: <FaHome />, label: 'Inicio', offset: -70 },
     { id: 'quienes-somos', icon: <FaUser />, label: 'Quiénes Somos', offset: -70 },
@@ -39,26 +39,25 @@ function Navbar() {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolling 
-          ? 'bg-[#b5cf2c] py-2 shadow-md'
-          : 'bg-[#b5cf2c] py-4'
+          ? 'bg-gradient-to-r from-[#b5cf2c] to-[#22c55e] py-2 shadow-md'
+          : 'bg-gradient-to-r from-[#b5cf2c] to-[#22c55e] py-4'
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          {/* Logo/Inicio con efecto de zoom al pasar el cursor */}
+          {/* Logo con efecto de zoom al pasar el cursor */}
           <motion.button
-  onClick={scrollToTop}
-  className="cursor-pointer"
-  whileHover={{ scale: 1.2 }}
-  transition={{ type: 'spring', stiffness: 300 }}
->
-  <img
-    src="/assets/logopichirayen.png"
-    alt="Logo"
-    className="w-24 h-24 rounded-[10px] shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl"
-  />
-</motion.button>
-
+            onClick={scrollToTop}
+            className="cursor-pointer"
+            whileHover={{ scale: 1.2 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
+            <img
+              src="/assets/logopichirayen.webp"
+              alt="Logo"
+              className="w-24 h-24 rounded-[10px] shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl"
+            />
+          </motion.button>
 
           {/* Botón menú hamburguesa (visible en móviles) */}
           <button
@@ -82,7 +81,7 @@ function Navbar() {
                 exit={{ opacity: 0, y: -20 }}
                 className={`${isLargeScreen 
                     ? 'flex' 
-                    : 'absolute top-full left-0 w-full bg-[#b5cf2c]'
+                    : 'absolute top-full left-0 w-full bg-gradient-to-r from-[#b5cf2c] to-[#22c55e]'
                   } lg:relative lg:w-auto lg:bg-transparent lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8 p-4 lg:p-0`}
               >
                 {menuItems.map((item) => (

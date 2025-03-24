@@ -4,14 +4,14 @@ import '@splidejs/splide/dist/css/splide.min.css';
 
 const slides = [
   { type: 'video', src: '/assets/videeos/videochacra.mp4', alt: 'Video de presentación' },
-  { type: 'image', src: '/assets/1.png', alt: 'Imagen 1' },
-  { type: 'image', src: '/assets/2.png', alt: 'Imagen 2' },
-  { type: 'image', src: '/assets/3.png', alt: 'Imagen 3' },
-  { type: 'image', src: '/assets/4.png', alt: 'Imagen 4' },
-  { type: 'image', src: '/assets/5.png', alt: 'Imagen 5' },
-  { type: 'image', src: '/assets/6.png', alt: 'Imagen 6' },
-  { type: 'image', src: '/assets/18.png', alt: 'Imagen 8' },
-  { type: 'image', src: '/assets/14.png', alt: 'Imagen 14' },
+  { type: 'image', src: '/assets/img webp/1.webp', alt: 'Imagen 1' },
+  { type: 'image', src: '/assets/img webp/2.webp', alt: 'Imagen 2' },
+  { type: 'image', src: '/assets/img webp/3.webp', alt: 'Imagen 3' },
+  { type: 'image', src: '/assets/img webp/4.webp', alt: 'Imagen 4' },
+  { type: 'image', src: '/assets/img webp/5.webp', alt: 'Imagen 5' },
+  { type: 'image', src: '/assets/img webp/6.webp', alt: 'Imagen 6' },
+  { type: 'image', src: '/assets/img webp/16.webp', alt: 'Imagen 16' },
+  { type: 'image', src: '/assets/img webp/18.webp', alt: 'Imagen 18' },
 ];
 
 const Carrusel = () => {
@@ -27,7 +27,7 @@ const Carrusel = () => {
   }, []);
 
   return (
-    <div className="splide mx-auto my-8 max-w-6xl rounded-lg overflow-hidden shadow-lg">
+    <div className="splide mx-auto my-8 max-w-6xl rounded-lg overflow-hidden shadow-lg ">
       <div className="splide__track">
         <div className="splide__list">
           {slides.map((slide, index) => (

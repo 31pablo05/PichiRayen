@@ -4,14 +4,14 @@ const personas = [
   {
     id: 1,
     nombre: 'Luis Ñancucheo',
-    foto: '/assets/13.webp',
+    foto: '/assets/img webp/LuisÑancucheo13.webp',
     descripcion:
       'Luis Ñancucheo es el Técnico en Producción Agropecuaria encargado de la logística y organización de los sistemas productivos en nuestra chacra...',
   },
   {
     id: 2,
     nombre: 'Camila Ñancucheo',
-    foto: '/assets/15.webp',
+    foto: '/assets/img webp/CamilaÑancucheo15.webp',
     descripcion:
       'Camila Ñancucheo es la Técnica en Turismo responsable de la organización, planificación y ventas de nuestra chacra...',
   },
