@@ -19,7 +19,7 @@ const personas = [
 
 const AboutMe = () => {
   return (
-    <section id="about" className="py-10 px-5 text-center bg-transparent">
+    <section id="about" className="py-10 mt-44 px-5 text-center bg-transparent">
       <h2 className="text-4xl font-bold mb-8 py-2 bg-gradient-to-r from-[#b5cf2c] to-[#22c55e] bg-clip-text text-transparent drop-shadow-md">
         Quienes Somos
       </h2>
