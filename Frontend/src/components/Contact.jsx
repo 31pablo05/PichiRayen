@@ -12,7 +12,7 @@ const Contact = () => {
   return (
     <section id="contacto" className="py-10 px-5 flex justify-center items-center min-h-[60vh]">
       <div className="bg-white/60 backdrop-blur-md shadow-lg rounded-md p-5 md:p-10 w-full max-w-3xl">
-        <h2 className="text-4xl font-bold text-[#b5cf2c] mb-6 text-center">Contacto</h2>
+        <h2 className="text-4xl font-bold bg-gradient-to-r from-[#b5cf2c] to-[#22c55e] mb-6 text-center">Contacto</h2>
 
         {/* Información de contacto */}
         <div className="flex flex-col gap-4">

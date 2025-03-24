@@ -34,7 +34,7 @@ const productosData = [
 const Products = () => {
   return (
     <section id="productos" className="py-10 px-5 text-center bg-white/10">
-      <h2 className="text-4xl font-bold mb-8 py-2 bg-gradient-to-r from-green-500 to-green-300 bg-clip-text text-transparent drop-shadow-md">
+      <h2 className="text-4xl font-bold mb-8 py-2 bg-gradient-to-r from-[#b5cf2c] to-[#22c55e] bg-clip-text text-transparent drop-shadow-md">
         Nuestros Productos
       </h2>
       <div className="flex flex-wrap justify-center gap-5">
