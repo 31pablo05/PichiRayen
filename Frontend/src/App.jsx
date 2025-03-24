@@ -14,7 +14,12 @@ function App() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="bg-gradient-to-b from-gray-900 to-black min-h-screen"
+        className="min-h-screen"
+        style={{
+          backgroundImage: 'url(/assets/fondoPagina.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
       >
         <Navbar />
         <main className="scroll-smooth">

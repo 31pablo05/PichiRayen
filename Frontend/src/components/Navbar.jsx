@@ -8,7 +8,7 @@ function Navbar() {
   const [scrolling, setScrolling] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
 
-  // Detecta el scroll para cambiar el fondo del navbar
+  // Detecta el scroll para ajustar el padding y sombra del navbar
   const handleScroll = useCallback(() => {
     setScrolling(window.scrollY > 50);
   }, []);
@@ -39,36 +39,37 @@ function Navbar() {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolling 
-          ? 'bg-gradient-to-r from-blue-700 to-violet-700 bg-opacity-90 backdrop-blur-sm py-2 shadow-md'
-          : 'bg-transparent py-4'
+          ? 'bg-[#b5cf2c] py-2 shadow-md'
+          : 'bg-[#b5cf2c] py-4'
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo/Inicio con efecto de zoom al pasar el cursor */}
           <motion.button
-            onClick={scrollToTop}
-            className="cursor-pointer"
-            whileHover={{ scale: 1.2 }}
-            transition={{ type: 'spring', stiffness: 300 }}
-          >
-            <img
-              src="/assets/logopichirayen.png"
-              alt="Logo"
-              className="w-10 h-10"
-            />
-          </motion.button>
+  onClick={scrollToTop}
+  className="cursor-pointer"
+  whileHover={{ scale: 1.2 }}
+  transition={{ type: 'spring', stiffness: 300 }}
+>
+  <img
+    src="/assets/logopichirayen.png"
+    alt="Logo"
+    className="w-24 h-24 rounded-[10px] shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl"
+  />
+</motion.button>
+
 
           {/* Botón menú hamburguesa (visible en móviles) */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-white focus:outline-none"
+            className="lg:hidden text-black focus:outline-none"
             aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
           >
             <div className="w-6 h-6 flex flex-col justify-between">
-              <span className={`block h-0.5 w-full bg-white transform transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2.5' : ''}`} />
-              <span className={`block h-0.5 w-full bg-white transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`} />
-              <span className={`block h-0.5 w-full bg-white transform transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2.5' : ''}`} />
+              <span className={`block h-0.5 w-full bg-black transform transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2.5' : ''}`} />
+              <span className={`block h-0.5 w-full bg-black transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`} />
+              <span className={`block h-0.5 w-full bg-black transform transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2.5' : ''}`} />
             </div>
           </button>
 
@@ -81,7 +82,7 @@ function Navbar() {
                 exit={{ opacity: 0, y: -20 }}
                 className={`${isLargeScreen 
                     ? 'flex' 
-                    : 'absolute top-full left-0 w-full bg-gradient-to-r from-blue-800 to-violet-800 bg-opacity-95'
+                    : 'absolute top-full left-0 w-full bg-[#b5cf2c]'
                   } lg:relative lg:w-auto lg:bg-transparent lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8 p-4 lg:p-0`}
               >
                 {menuItems.map((item) => (
@@ -97,7 +98,7 @@ function Navbar() {
                       duration={500}
                       offset={item.offset}
                       onClick={() => setIsOpen(false)}
-                      className="flex items-center space-x-2 text-white hover:text-violet-300 transition-colors cursor-pointer"
+                      className="flex items-center space-x-2 text-black hover:text-gray-800 transition-colors cursor-pointer"
                     >
                       {item.icon}
                       <span>{item.label}</span>
