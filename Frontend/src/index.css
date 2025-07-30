@@ -1,3 +1,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Estilos base para mejorar la experiencia del usuario */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans antialiased;
+  }
+  
+  /* Estilos para elementos enfocados (accesibilidad) */
+  .sr-only {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+  }
+  
+  .focus\:not-sr-only:focus {
+    @apply static w-auto h-auto p-2 m-0 overflow-visible whitespace-normal;
+  }
+}
+
+/* Componentes personalizados con Tailwind */
+@layer components {
+  .animate-fade-in {
+    @apply opacity-100 translate-y-0 transition-all duration-700 ease-out;
+  }
+  
+  .animate-fade-in-start {
+    @apply opacity-0 translate-y-4;
+  }
+  
+  /* Botón con efecto hover mejorado */
+  .btn-primary {
+    @apply bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 focus:ring-2 focus:ring-green-500 focus:ring-offset-2;
+  }
+  
+  /* Card con sombra suave */
+  .card {
+    @apply bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+}
+
+/* Utilidades personalizadas */
+@layer utilities {
+  /* Gradientes personalizados */
+  .bg-gradient-green {
+    @apply bg-gradient-to-br from-green-400 to-green-600;
+  }
+  
+  /* Scrollbar personalizado */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #10b981 #f3f4f6;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-green-500 rounded-full;
+  }
+}
